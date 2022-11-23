@@ -3,7 +3,10 @@ import SelectLanguage from './select-language';
 
 export const HeaderStyle = styled.div`
     display: flex;
-    width: 80%;
+    margin: 2rem auto;
+    & h1 {
+        font-size: 3rem;
+    }
 `
 
 const Header = () => {
