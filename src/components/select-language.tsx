@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Poland from '../assets/img/flags/poland.svg'
+import DropdownMenuWithLanguages from './dropdown-menu-with-languages';
 
 export const SelectLanguageContainer = styled.div`
     margin-left: 2rem;
@@ -14,8 +15,9 @@ export const ImageLanguageContainer = styled.div`
     height: 1.5rem;
     width: 2rem;
     padding: 0.5rem;
-    border: 2px solid #A4BE7B;
+    border: 1px solid #A4BE7B;
     border-radius: 6px;
+    position: relative;
 
 `
 
@@ -30,6 +32,7 @@ const SelectLanguage = () => {
       <p>Select Language:</p>
       <ImageLanguageContainer>
         <ImageLnaguage src={Poland} alt='selected flag'/>
+        <DropdownMenuWithLanguages />
       </ImageLanguageContainer>
         
     </SelectLanguageContainer>
