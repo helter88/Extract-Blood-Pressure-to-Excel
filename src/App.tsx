@@ -1,10 +1,11 @@
+import Header from "./components/header";
 import { MainCointainer } from "./components/main-container";
 
 
 const App = () => {
   return (
     <MainCointainer>
-          Start
+          <Header />
     </MainCointainer>  
   );
 }
