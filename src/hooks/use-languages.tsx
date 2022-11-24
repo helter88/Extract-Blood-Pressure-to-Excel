@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useLocalStorage } from 'usehooks-ts'
 
 const useLanguages = () => {
-    const [languages, setLanguages]= useState(["English", "German", "Italian", "Polish"])
+    const allLanguages = ["English", "German", "Italian", "Polish"]
+    const [languages, setLanguages]= useState(allLanguages)
     const [language, setLanguage]= useLocalStorage('language', '')
 
     const selectDefaultLanguage = () => {
@@ -22,12 +23,19 @@ const useLanguages = () => {
         if (language === ""){
             const selectedDefaultLang = selectDefaultLanguage();
             setLanguage(selectDefaultLanguage);
-        }else{
-            setLanguages((prev)=>
-                prev?.filter((item:string)=> item!==language)
+            setLanguages((prev) =>
+                prev.filter((lang) => lang !== selectedDefaultLang)
             )
         }
+    },[])
+
+    useEffect(() => {
+            setLanguages(()=>
+                allLanguages?.filter((item)=> item!==language)
+            )
     },[language])
+
+   
   return {language, languages, setLanguage}
 }
 

@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import styled from 'styled-components';
-import Poland from '../assets/img/flags/poland.svg'
 import DropdownMenuWithLanguages from './dropdown-menu-with-languages';
+import ShowCurrentImgLang from './show-current-img-lang';
 
 export const SelectLanguageContainer = styled.div`
     margin-left: 2rem;
@@ -22,11 +22,6 @@ export const ImageLanguageContainer = styled.div`
 
 `
 
-export const ImageLnaguage = styled.img`
-    width: 100%;
-    height: 100%;
-`
-
 const SelectLanguage = () => {
     const [isOpen, setIsOpen] = useState(false)
 
@@ -38,7 +33,7 @@ const SelectLanguage = () => {
       <p>Select Language:</p>
       <ImageLanguageContainer onMouseEnter={onHandleMouseEnter} 
         onMouseLeave={onHandleMouseLeave}>
-        <ImageLnaguage src={Poland} alt='selected flag'/>
+        <ShowCurrentImgLang />
         <DropdownMenuWithLanguages openStatus={isOpen} />
       </ImageLanguageContainer>
         
