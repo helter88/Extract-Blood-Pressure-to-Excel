@@ -47,8 +47,9 @@ interface OpenStatus {
 
 
 const DropdownMenuWithLanguages = ({openStatus}: OpenStatus) => {
-    const language = useLanguages();
-    console.log('drop', language)
+    const {language, languages, setLanguage} = useLanguages();
+    console.log('default language is', language)
+    console.log("list of languages is:", languages)
   return (
     <DropContainer openStatus={openStatus}>
         <RowLanguageContainer>
