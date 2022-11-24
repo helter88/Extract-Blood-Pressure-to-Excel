@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import American from '../assets/img/flags/american.svg'
 import Germany from '../assets/img/flags/germany-flag-icon.svg'
 import Italy from '../assets/img/flags/italy.svg'
+import useLanguages from '../hooks/use-languages';
 
-const DropContainer = styled.div`
-    display: none;
+const DropContainer = styled.div<OpenStatus>`
+    /* display: ${({openStatus}) => !openStatus && "none"}; */
     position: absolute;
     left: 0;
     top: 3rem;
@@ -40,12 +41,16 @@ const SingleImageContainer = styled.div`
     }
    
 `
+interface OpenStatus {
+    openStatus: boolean
+}
 
 
-
-const DropdownMenuWithLanguages = () => {
+const DropdownMenuWithLanguages = ({openStatus}: OpenStatus) => {
+    const language = useLanguages();
+    console.log('drop', language)
   return (
-    <DropContainer>
+    <DropContainer openStatus={openStatus}>
         <RowLanguageContainer>
             <SingleImageContainer>
                 <img src={American} alt='flag'/>

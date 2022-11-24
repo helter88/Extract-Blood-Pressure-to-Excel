@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import styled from 'styled-components';
 import Poland from '../assets/img/flags/poland.svg'
 import DropdownMenuWithLanguages from './dropdown-menu-with-languages';
@@ -27,12 +28,18 @@ export const ImageLnaguage = styled.img`
 `
 
 const SelectLanguage = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+
+    const onHandleMouseEnter = () => setIsOpen(true);
+    const onHandleMouseLeave = () => setIsOpen(false);
   return (
     <SelectLanguageContainer>
       <p>Select Language:</p>
-      <ImageLanguageContainer>
+      <ImageLanguageContainer onMouseEnter={onHandleMouseEnter} 
+        onMouseLeave={onHandleMouseLeave}>
         <ImageLnaguage src={Poland} alt='selected flag'/>
-        <DropdownMenuWithLanguages />
+        <DropdownMenuWithLanguages openStatus={isOpen} />
       </ImageLanguageContainer>
         
     </SelectLanguageContainer>
