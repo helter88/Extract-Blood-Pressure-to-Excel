@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import English from '../assets/img/flags/american.svg'
-import Germany from '../assets/img/flags/germany-flag-icon.svg'
+import German from '../assets/img/flags/germany-flag-icon.svg'
 import Italian from '../assets/img/flags/italy.svg'
 import Polish from '../assets/img/flags/poland.svg'
 
@@ -33,10 +33,22 @@ const SingleImageContainer = styled.div`
 `
 
 const LanguageDropdownRow = ({language}:{language:string}) => {
+    const selectedFlag = () =>{
+        switch (language) {
+            case "Polish":
+                return Polish
+            case "German":
+                return German
+            case "Italian":
+                return Italian
+            default: 
+                return English
+        }
+    }
   return (
     <RowLanguageContainer>
         <SingleImageContainer>
-            <img src={English} alt='flag'/>
+            <img src={selectedFlag()} alt='flag'/>
         </SingleImageContainer>
          <p>{language}</p>
     </RowLanguageContainer>
