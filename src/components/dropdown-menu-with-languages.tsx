@@ -24,11 +24,12 @@ const DropdownMenuWithLanguages = ({openStatus}: OpenStatus) => {
     const {language, languages, setLanguage} = useLanguages();
     console.log('default language is', language)
     console.log("list of languages is:", languages)
+    const LanguageDropdownRowList = languages?.map((lang:string)=>{
+        return  <LanguageDropdownRow key={lang} language={lang}/>
+    })
   return (
     <DropContainer openStatus={openStatus}>
-       <LanguageDropdownRow language="English"/>
-       <LanguageDropdownRow language="German"/>
-       <LanguageDropdownRow language="Italian"/>
+       {LanguageDropdownRowList}
       
     </DropContainer>
   )
