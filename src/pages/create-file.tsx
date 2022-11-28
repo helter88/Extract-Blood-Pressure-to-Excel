@@ -4,7 +4,7 @@ import CenterBox from '../components/center-box'
 import NewFileBox from '../components/new-file-box'
 import InputBox from '../components/input-box'
 
-const CreateFileContainer = styled.div`
+export const CreateFileContainer = styled.div`
     margin-top: 10rem;
     display: flex;
     justify-content: space-between;

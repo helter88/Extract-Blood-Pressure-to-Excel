@@ -12,6 +12,7 @@ export const ExcelFileContainer = styled.div`
     flex-direction: column;
     align-items:center;
     transition: all .4s ease-in-out;
+    border-radius: 0.5rem;
     cursor: pointer;
     &:hover {
         transform: scale(1.1)

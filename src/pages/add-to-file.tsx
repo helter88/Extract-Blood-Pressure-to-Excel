@@ -1,11 +1,16 @@
 import React from 'react'
+import CenterBox from '../components/center-box'
+import FileBox from '../components/file-box'
 import InputBox from '../components/input-box'
+import { CreateFileContainer } from './create-file'
 
 const AddToFile = () => {
   return (
-    <div>
+    <CreateFileContainer>
       <InputBox />
-    </div>
+      <CenterBox/>
+      <FileBox />
+    </CreateFileContainer>
   )
 }
 
