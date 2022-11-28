@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import useLanguages from '../hooks/use-languages';
 import { selectFlag } from '../utils/select-flag';
+import { useTranslation } from 'react-i18next';
 
 const RowLanguageContainer = styled.div`
     width:100%;
@@ -32,8 +33,12 @@ const SingleImageContainer = styled.div`
 
 const LanguageDropdownRow = ({language}:{language:string}) => {
     const {setLanguage} = useLanguages();
+    const {  } = useTranslation()
 
-    const onClickHandler = () => setLanguage(language);
+    const onClickHandler = () => {
+        setLanguage(language);
+        
+    }
 
   return (
     <RowLanguageContainer onClick={onClickHandler}>
