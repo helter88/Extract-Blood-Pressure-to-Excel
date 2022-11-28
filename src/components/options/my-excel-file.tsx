@@ -1,10 +1,12 @@
 import React from 'react'
+import { ExcelFileContainer } from './no-excel-file'
 
 const MyExcelFile = () => {
   return (
-    <div>
-      I have my own Excel file
-    </div>
+    <ExcelFileContainer>
+        <p>I have my own Excel file</p>
+      
+    </ExcelFileContainer>
   )
 }
 
