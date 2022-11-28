@@ -1,6 +1,6 @@
 import Header from "./components/header";
 import { MainCointainer } from "./components/main-container";
-import Options from "./components/options";
+import Options from "./components/options/options";
 import SecondLine from "./components/second-line";
 
 
