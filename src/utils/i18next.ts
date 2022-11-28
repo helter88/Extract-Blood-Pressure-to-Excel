@@ -1,27 +1,25 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import en from '../lng/en.json'
+import de from '../lng/de.json'
+import it from '../lng/it.json'
+import pl from '../lng/pl.json'
+
+
 
 const resources = {
   en: {
-    translation: {
-      "Title": "Exract Blood Pressure to Excel"
-    }
+    translation: en,
   },
   pl: {
-    translation: {
-      "Title": "Wydobądź Ciśnienie Krwi do pliku Excel"
-    }
+    translation: pl,
   },
   de: {
-    translation: {
-      "Title": "Blutdruck nach Excel extrahieren"
-    }
+    translation: de,
     
   },
   it: {
-    translation: {
-      "Title": "Estrarre la pressione sanguigna in Excel"
-    }
+    translation: it,
   },
   
 };
