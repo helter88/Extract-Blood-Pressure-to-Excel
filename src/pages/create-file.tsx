@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import CenterBox from '../components/center-box'
-import FileBox from '../components/file-box'
+import NewFileBox from '../components/new-file-box'
 import InputBox from '../components/input-box'
 
 const CreateFileContainer = styled.div`
@@ -16,7 +16,7 @@ const CreateFile = () => {
     <CreateFileContainer>
       <InputBox />
       <CenterBox/>
-      <FileBox />
+      <NewFileBox />
     </CreateFileContainer>
   )
 }

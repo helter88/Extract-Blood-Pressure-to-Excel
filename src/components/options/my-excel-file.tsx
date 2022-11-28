@@ -1,4 +1,3 @@
-import React from 'react'
 import { ExcelFileContainer, ImageContainer } from './no-excel-file'
 import { useTranslation } from 'react-i18next';
 import {ReactComponent as MyExcel} from '../../assets/img/main/excel-icon.svg'
