@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { useTranslation } from 'react-i18next';
 import {ReactComponent as NoExcel} from '../../assets/img/main/noExcel-icon.svg'
+import { useNavigate } from "react-router-dom";
 
 export const ExcelFileContainer = styled.div`
     width: 20rem;
@@ -28,8 +29,10 @@ export const ImageContainer = styled.div`
 `
 const NoExcelFile = () => {
     const { t } = useTranslation()
+    const navigate = useNavigate()
+    const onHandleClick = () => navigate("/create-file")
   return (
-    <ExcelFileContainer>
+    <ExcelFileContainer onClick={onHandleClick}>
       <p>{t("No Excel")}</p> 
       <ImageContainer>
         <NoExcel aria-label="No Excel" />

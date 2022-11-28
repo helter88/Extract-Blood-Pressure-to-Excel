@@ -1,9 +1,10 @@
 import React from 'react'
+import InputBox from '../components/input-box'
 
 const AddToFile = () => {
   return (
     <div>
-      Add to file
+      <InputBox />
     </div>
   )
 }
