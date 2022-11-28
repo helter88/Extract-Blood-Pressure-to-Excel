@@ -1,5 +1,7 @@
 {
     "Title": "Estrarre la pressione sanguigna in Excel",
     "Select Language" : "Seleziona la lingua:",
-    "Select one of the options": "Seleziona una delle opzioni:"
+    "Select one of the options": "Seleziona una delle opzioni:",
+    "No Excel": "Non ho file Excel",
+    "My Excel": "Ho il mio file Excel"
 }

@@ -1,5 +1,7 @@
 {
     "Title": "Blutdruck nach Excel extrahieren",
     "Select Language": "Sprache auswählen:",
-    "Select one of the options": "Wählen Sie eine der Optionen:"
+    "Select one of the options": "Wählen Sie eine der Optionen:",
+    "No Excel": "Ich habe keine Excel-Datei",
+    "My Excel": "Ich habe eine eigene Excel-Datei"
 }

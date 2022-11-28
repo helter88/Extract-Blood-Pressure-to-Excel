@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useTranslation } from 'react-i18next';
 
 export const ExcelFileContainer = styled.div`
     width: 20rem;
@@ -11,9 +12,10 @@ export const ExcelFileContainer = styled.div`
     }
 `
 const NoExcelFile = () => {
+    const { t } = useTranslation()
   return (
     <ExcelFileContainer>
-      <p>No Excel file</p>    
+      <p>{t("No Excel")}</p>    
     </ExcelFileContainer>
   )
 }
