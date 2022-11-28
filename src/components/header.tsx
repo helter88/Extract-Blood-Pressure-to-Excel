@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SelectLanguage from './select-language';
+import SelectLanguage from './dropdown-menu/select-language';
 import { useTranslation } from 'react-i18next';
 import useLanguages from '../hooks/use-languages';
 import { useEffect } from 'react';

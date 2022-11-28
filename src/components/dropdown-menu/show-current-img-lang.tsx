@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import useLanguages from '../hooks/use-languages';
-import { selectFlag } from '../utils/select-flag';
+import useLanguages from '../../hooks/use-languages';
+import { selectFlag } from '../../utils/select-flag';
 
 
 export const ImageLang = styled.img`

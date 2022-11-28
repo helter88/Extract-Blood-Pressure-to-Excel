@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import useLanguages from '../hooks/use-languages';
+import useLanguages from '../../hooks/use-languages';
 import LanguageDropdownRow from './language-dropdown-row';
 
 const DropContainer = styled.div<OpenStatus>`
@@ -9,7 +9,7 @@ const DropContainer = styled.div<OpenStatus>`
     left: 0;
     top: 3rem;
     width: 10rem;
-    border: 1px solid #A4BE7B;
+    border: 1px solid #107C41;
     border-radius: 6px;
 `
 

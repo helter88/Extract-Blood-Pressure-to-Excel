@@ -17,7 +17,7 @@ export const ImageLanguageContainer = styled.div`
     height: 1.5rem;
     width: 2rem;
     padding: 0.5rem;
-    border: 1px solid #A4BE7B;
+    border: 1px solid #107C41;
     border-radius: 6px;
     position: relative;
 

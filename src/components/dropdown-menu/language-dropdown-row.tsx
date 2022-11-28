@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import useLanguages from '../hooks/use-languages';
-import { selectFlag } from '../utils/select-flag';
+import useLanguages from '../../hooks/use-languages';
+import { selectFlag } from '../../utils/select-flag';
 import { useTranslation } from 'react-i18next';
-import { lngToISO } from '../utils/lng-to-iso';
+import { lngToISO } from '../../utils/lng-to-iso';
 
 const RowLanguageContainer = styled.div`
     width:100%;
@@ -15,7 +15,7 @@ const RowLanguageContainer = styled.div`
     }
 
     &:hover{
-        background-color: #A4BE7B;
+        background-color: #76D593;
         & p{
             opacity: 1;
         }    
