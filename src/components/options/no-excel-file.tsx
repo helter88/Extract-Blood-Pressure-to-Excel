@@ -13,7 +13,7 @@ export const ExcelFileContainer = styled.div`
     transition: all .4s ease-in-out;
     cursor: pointer;
     &:hover {
-        transform: scale(1.2)
+        transform: scale(1.1)
     }
     p {
         text-align: center;
