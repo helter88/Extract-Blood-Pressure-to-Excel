@@ -5,7 +5,7 @@ import NoExcelFile from "./no-excel-file"
 const OptionsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 8rem;
+  margin-top: 6rem;
   padding: 0 25rem;
 `
 
