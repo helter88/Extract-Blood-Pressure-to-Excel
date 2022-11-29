@@ -3,6 +3,7 @@ import {ReactComponent as RightArrow} from '../assets/img/arrow-right-icon.svg';
 
 const ArrowContainer = styled.div`
     width: 10rem;
+    fill: #107C41;
 
 `
 

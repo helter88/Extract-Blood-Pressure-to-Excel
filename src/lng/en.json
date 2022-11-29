@@ -3,5 +3,9 @@
     "Select Language" : "Select Language:",
     "Select one of the options": "Select one of the options:",
     "No Excel": "I haven't got Excel file",
-    "My Excel": "I have my own Excel file"
+    "My Excel": "I have my own Excel file",
+    "Polish": "Polski",
+    "English": "English",
+    "German": "Deutsch",
+    "Italian": "Italiano"
 }

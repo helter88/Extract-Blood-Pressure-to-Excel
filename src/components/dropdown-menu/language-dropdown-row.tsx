@@ -34,7 +34,7 @@ const SingleImageContainer = styled.div`
 
 const LanguageDropdownRow = ({language}:{language:string}) => {
     const {setLanguage} = useLanguages();
-    const { i18n } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     const onClickHandler = () => {
         setLanguage(language);
@@ -46,7 +46,7 @@ const LanguageDropdownRow = ({language}:{language:string}) => {
         <SingleImageContainer>
             <img src={selectFlag(language)} alt='flag'/>
         </SingleImageContainer>
-         <p>{language}</p>
+         <p>{t(language)}</p>
     </RowLanguageContainer>
   )
 }
