@@ -7,7 +7,7 @@ const FirstPage = () => {
       <SecondLine />
       <Options />
     </>
-  )
-}
+  );
+};
 
-export default FirstPage
+export default FirstPage;

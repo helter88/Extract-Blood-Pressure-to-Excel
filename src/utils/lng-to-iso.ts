@@ -1,5 +1,5 @@
 
-export const lngToISO = (language:string) =>{
+export const lngToISO = (language: string) => {
     switch (language) {
         case "Polish":
             return 'pl'
@@ -7,7 +7,7 @@ export const lngToISO = (language:string) =>{
             return 'de'
         case "Italian":
             return 'it'
-        default: 
+        default:
             return 'en'
     }
 }
