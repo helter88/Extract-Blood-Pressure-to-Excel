@@ -1,11 +1,11 @@
-import Options from "../components/options/options";
+import AllOptions from "../components/options";
 import SecondLine from "../components/second-line";
 
 const FirstPage = () => {
   return (
     <>
       <SecondLine />
-      <Options />
+      <AllOptions />
     </>
   );
 };

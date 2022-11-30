@@ -1,6 +1,6 @@
 import React from "react";
-import { ExcelFileContainer, ImageContainer } from "./options/no-excel-file";
-import { ReactComponent as MyExcel } from "../assets/img/main/excel-icon.svg";
+import { ExcelFileContainer, ImageContainer } from "../options/no-excel-file";
+import { ReactComponent as MyExcel } from "../../assets/img/main/excel-icon.svg";
 
 const NewFileBox = () => {
   return (

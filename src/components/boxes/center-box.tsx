@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as RightArrow } from "../assets/img/arrow-right-icon.svg";
+import { ReactComponent as RightArrow } from "../../assets/img/arrow-right-icon.svg";
 import { useTranslation } from "react-i18next";
 
 const CenterContainer = styled.div`
