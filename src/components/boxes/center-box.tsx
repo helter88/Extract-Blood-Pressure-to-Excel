@@ -1,15 +1,9 @@
-import styled from "styled-components";
+
 import { ReactComponent as RightArrow } from "../../assets/img/arrow-right-icon.svg";
 import { useTranslation } from "react-i18next";
+import { ArrowContainer, CenterContainer } from "./styles/center-box";
 
-const CenterContainer = styled.div`
-  align-self: center;
-`;
 
-const ArrowContainer = styled.div`
-  width: 10rem;
-  fill: #107c41;
-`;
 
 const CenterBox = () => {
   const { t } = useTranslation();
