@@ -17,6 +17,11 @@ export const ExcelFileContainer = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+  &.no-scale{
+    &:hover{
+      transform: none;
+    }
+  }
   p {
     text-align: center;
     font-size: 1.2rem;

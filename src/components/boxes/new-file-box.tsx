@@ -4,7 +4,7 @@ import { ReactComponent as MyExcel } from "../../assets/img/main/excel-icon.svg"
 
 const NewFileBox = () => {
   return (
-    <ExcelFileContainer>
+    <ExcelFileContainer className="no-scale">
       <p>Create new Excel File</p>
       <ImageContainer>
         <MyExcel aria-label="Ny Excel" />
