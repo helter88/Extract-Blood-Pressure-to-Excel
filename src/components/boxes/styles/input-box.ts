@@ -9,5 +9,9 @@ export const InputBoxContainer = styled.div`
     padding: 1rem;
     background-color: #107c41;
     color: white;
+  };
+  & label {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
   }
 `;
