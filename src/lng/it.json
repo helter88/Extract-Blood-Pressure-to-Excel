@@ -1,6 +1,6 @@
 {
     "Title": "Estrarre la pressione sanguigna in Excel",
-    "Select Language" : "Seleziona la lingua:",
+    "Select Language": "Seleziona la lingua:",
     "Select one of the options": "Seleziona una delle opzioni:",
     "No Excel": "Non ho file Excel",
     "My Excel": "Ho il mio file Excel",
@@ -8,5 +8,6 @@
     "English": "English",
     "German": "Deutsch",
     "Italian": "Italiano",
-    "Start processing":"Avvia l'elaborazione"
+    "Start exporting": "Avvia l'esportazione",
+    "average": "media"
 }

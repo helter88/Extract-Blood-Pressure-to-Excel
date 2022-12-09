@@ -1,10 +1,10 @@
-import { ChooseFileButton, FlieBoxContainer } from "./styles/file-box";
+import { ActionButton, FlieBoxContainer } from "./styles/file-box";
 
 
 const FileBox = () => {
   return (
     <FlieBoxContainer>
-      <ChooseFileButton>Choose your file</ChooseFileButton>
+      <ActionButton>Choose your file</ActionButton>
     </FlieBoxContainer>
   );
 };

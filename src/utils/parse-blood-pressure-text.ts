@@ -1,3 +1,5 @@
+import i18next from "i18next";
+
 export interface BloodPressure {
     pulse: number
     date: string
@@ -10,7 +12,6 @@ const totalDefault = { systolic: 0, diastolic: 0, pulse: 0 }
 export const parse = (text: string): BloodPressure[] => {
     const lines = text.split('\n')
     const columns = lines.map(l => l.split(' ')).filter(l => l.length > 2)
-
 
     let total = totalDefault
     let items: BloodPressure[] = []
@@ -44,7 +45,7 @@ export const parse = (text: string): BloodPressure[] => {
 
         if ((i + 1) % 7 === 0) {
             const bp = {
-                date: 'Srednia',
+                date: `${i18next.t("average")}`,
                 systolic: Math.round(total.systolic / 7),
                 diastolic: Math.round(total.diastolic / 7),
                 pulse: Math.round(total.pulse / 7)

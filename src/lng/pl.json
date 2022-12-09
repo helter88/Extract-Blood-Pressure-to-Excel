@@ -1,6 +1,6 @@
 {
     "Title": "Wydobądź Ciśnienie Krwi do pliku Excel",
-    "Select Language" : "Wybierz język:",
+    "Select Language": "Wybierz język:",
     "Select one of the options": "Wybierz jedną z opcji:",
     "No Excel": "Nie mam pliku Excela",
     "My Excel": "Mam własny plik Excela",
@@ -8,5 +8,6 @@
     "English": "English",
     "German": "Deutsch",
     "Italian": "Italiano",
-    "Start processing":"Rozpocznij przetwarzanie"
+    "Start exporting": "Rozpocznij eksport",
+    "average": "średnia"
 }

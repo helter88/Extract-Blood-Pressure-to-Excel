@@ -11,7 +11,7 @@ export const FlieBoxContainer = styled.div`
   justify-content: center;
   border-radius: 0.5rem;
 `;
-export const ChooseFileButton = styled.button`
+export const ActionButton = styled.button`
   padding: 1rem 2rem;
   background-color: #107c41;
   color: white;

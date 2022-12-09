@@ -4,6 +4,7 @@ export const CenterContainer = styled.div`
 `;
 
 export const ArrowContainer = styled.div`
+  margin-top: 2rem;
   width: 10rem;
   fill: #107c41;
 `;
