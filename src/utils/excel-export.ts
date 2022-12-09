@@ -1,6 +1,6 @@
 import XLSX from 'sheetjs-style'
 import * as FileSaver from 'file-saver'
-import { BloodPressure } from './parse-blood-pressure-text'
+
 
 const fileType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8"
 

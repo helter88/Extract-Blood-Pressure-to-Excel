@@ -11,6 +11,7 @@ export const parse = (text: string): BloodPressure[] => {
     const lines = text.split('\n')
     const columns = lines.map(l => l.split(' ')).filter(l => l.length > 2)
 
+
     let total = totalDefault
     let items: BloodPressure[] = []
 
@@ -44,9 +45,9 @@ export const parse = (text: string): BloodPressure[] => {
         if ((i + 1) % 7 === 0) {
             const bp = {
                 date: 'Srednia',
-                systolic: total.systolic / 7,
-                diastolic: total.diastolic / 7,
-                pulse: total.pulse / 7
+                systolic: Math.round(total.systolic / 7),
+                diastolic: Math.round(total.diastolic / 7),
+                pulse: Math.round(total.pulse / 7)
             }
 
             total = totalDefault
