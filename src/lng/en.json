@@ -13,5 +13,6 @@
     "Date": "Date",
     "Systolic": "Systolic",
     "Diastolic": "Diastolic",
-    "Pulse": "Pulse"
+    "Pulse": "Pulse",
+    "blood-pressure": "blood-pressure"
 }

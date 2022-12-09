@@ -13,5 +13,6 @@
     "Date": "Data",
     "Systolic": "Sistolico",
     "Diastolic": "Diastolico",
-    "Pulse": "Polso"
+    "Pulse": "Polso",
+    "blood-pressure": "pressione-sanguigna"
 }

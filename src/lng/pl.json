@@ -13,5 +13,6 @@
     "Date": "Data",
     "Systolic": "Skurczowe",
     "Diastolic": "Rozkurczowe",
-    "Pulse": "Puls"
+    "Pulse": "Puls",
+    "blood-pressure": "ciśnienie-krwi"
 }

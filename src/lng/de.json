@@ -13,5 +13,6 @@
     "Date": "Datum",
     "Systolic": "Systolisch",
     "Diastolic": "Diastolisch",
-    "Pulse": "Impuls"
+    "Pulse": "Impuls",
+    "blood-pressure": "Blutdruck"
 }

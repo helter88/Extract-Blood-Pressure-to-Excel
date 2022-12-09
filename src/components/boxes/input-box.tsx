@@ -1,20 +1,16 @@
+import { forwardRef } from 'react';
 import { InputBoxContainer } from "./styles/input-box";
 import { parse } from '../../utils/parse-blood-pressure-text'
-import { exportExcel } from "../../utils/excel-create-export";
 
-const InputBox = () => {
-  const handleBlur = (e: any) => {
-    const data = parse(e?.target?.value)
-    exportExcel(data)
-  }
+const InputBox = forwardRef<HTMLTextAreaElement>((props, ref) => {
 
   return (
     <InputBoxContainer>
       <label htmlFor="results">Add your results</label>
-      <textarea onBlur={handleBlur} id="results" name="results" rows={25} cols={30} />
+      <textarea ref={ref} id="results" name="results" rows={25} cols={30} />
     </InputBoxContainer>
   );
-};
+});
 
 export default InputBox;
 

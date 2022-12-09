@@ -5,7 +5,7 @@ import i18next from "i18next";
 
 const fileType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8"
 
-export const exportExcel = (data: any) => {
+export const createExcelAndExport = (data: any) => {
 
     const ws = XLSX.utils.json_to_sheet([{ '': '' }])
     XLSX.utils.sheet_add_aoa(ws, [[`${i18next.t("Date")}`, `${i18next.t("Systolic")}`, `${i18next.t("Diastolic")}`, `${i18next.t("Pulse")}`]]);
@@ -17,5 +17,5 @@ export const exportExcel = (data: any) => {
     const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' })
 
     const excelData = new Blob([excelBuffer], { type: fileType })
-    FileSaver.saveAs(excelData, `${"blood-presure"}.xlsx`)
+    FileSaver.saveAs(excelData, `${i18next.t("blood-pressure")}.xlsx`)
 }
