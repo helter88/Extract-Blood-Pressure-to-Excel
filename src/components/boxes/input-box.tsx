@@ -1,6 +1,6 @@
 import { InputBoxContainer } from "./styles/input-box";
 import { parse } from '../../utils/parse-blood-pressure-text'
-import { exportExcel } from "../../utils/excel-export";
+import { exportExcel } from "../../utils/excel-create-export";
 
 const InputBox = () => {
   const handleBlur = (e: any) => {
