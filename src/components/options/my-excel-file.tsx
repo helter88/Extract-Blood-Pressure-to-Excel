@@ -11,7 +11,7 @@ const MyExcelFile = () => {
     <ExcelFileContainer onClick={onHandleClick}>
       <p>{t("My Excel")}</p>
       <ImageContainer>
-        <MyExcel aria-label="Ny Excel" />
+        <MyExcel aria-label="My Excel" />
       </ImageContainer>
     </ExcelFileContainer>
   );

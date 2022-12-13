@@ -20,6 +20,7 @@ export const ExcelFileContainer = styled.div`
   &.no-scale{
     &:hover{
       transform: none;
+      cursor: auto;
     }
   }
   p {
