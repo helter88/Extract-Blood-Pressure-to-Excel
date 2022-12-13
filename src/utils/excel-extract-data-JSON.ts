@@ -29,6 +29,5 @@ export const excelExtractDataJSON = (e: any) => {
         })
 
     }
-    console.log(filteredDataWithEnglishProperties)
     return filteredDataWithEnglishProperties
 }

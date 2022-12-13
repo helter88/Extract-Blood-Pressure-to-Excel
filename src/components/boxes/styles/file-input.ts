@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FileInput = styled.input`
+export const FileInput = styled.label`
   padding: 1rem 2rem;
   background-color: #107c41;
   color: white;
@@ -8,4 +8,12 @@ export const FileInput = styled.input`
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
+  input {
+    display: none;
+  }
+  span {
+    font-size: 0.83rem;
+    font-family: Arial;
+    font-weight: 400;
+  }
 `;

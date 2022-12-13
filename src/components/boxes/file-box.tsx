@@ -9,12 +9,16 @@ const FileBox = () => {
 
   const handleFile = (e: any) => {
     const recivedData = excelExtractDataJSON(e);
+    console.log('receivedData:', recivedData)
   }
 
   return (
     <FlieBoxContainer>
-      <ActionButton>Choose your file</ActionButton>
-      <FileInput type="file" onChange={handleFile} />
+      <FileInput>
+        <input type="file" onChange={handleFile} />
+        <span>Choose your file</span>
+      </FileInput>
+
     </FlieBoxContainer>
   );
 };
