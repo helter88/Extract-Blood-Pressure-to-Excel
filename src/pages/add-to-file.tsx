@@ -17,11 +17,15 @@ const AddToFile = () => {
     setFileSelectStatus(true)
   }
 
+  const handleFileSelected = () => {
+    setFileSelectStatus(false)
+  }
+
   return (
     <CreateFileContainer>
       <InputBox ref={inputRef} />
       <CenterBox name="add" inputData={inputRef} excelData={fileBoxData} changeFileSelectStatus={hendleFileSelectStatus} />
-      <FileBox excelData={handleExcelData} fileSelectStatus={fileSelectStatus} />
+      <FileBox excelData={handleExcelData} fileSelectStatus={fileSelectStatus} fileSelected={handleFileSelected} />
     </CreateFileContainer>
   );
 };

@@ -5,15 +5,19 @@ import { FileInput } from "./styles/file-input";
 
 export interface FileBoxTypes {
   excelData: (recivedData: any) => void,
-  fileSelectStatus: boolean | null
+  fileSelectStatus: boolean | null,
+  fileSelected: () => void
 
 }
 
-const FileBox: React.FC<FileBoxTypes> = ({ excelData, fileSelectStatus }) => {
+const FileBox: React.FC<FileBoxTypes> = ({ excelData, fileSelectStatus, fileSelected }) => {
   const { t } = useTranslation();
   const handleFile = async (e: any) => {
     const recivedData = await excelExtractDataJSON(e);
     excelData(recivedData)
+    if (e) {
+      fileSelected();
+    }
   }
 
   const isVisible = fileSelectStatus === null || fileSelectStatus === false ? ""
