@@ -1,6 +1,5 @@
 import { ActionButton, FileNotChosen, FlieBoxContainer } from "./styles/file-box";
-import * as XLSX from 'sheetjs-style';
-import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import { excelExtractDataJSON } from "../../utils/excel-extract-data-JSON";
 import { FileInput } from "./styles/file-input";
 
@@ -11,18 +10,20 @@ export interface FileBoxTypes {
 }
 
 const FileBox: React.FC<FileBoxTypes> = ({ excelData, fileSelectStatus }) => {
-
+  const { t } = useTranslation();
   const handleFile = async (e: any) => {
     const recivedData = await excelExtractDataJSON(e);
     excelData(recivedData)
   }
 
+  const isVisible = fileSelectStatus === null || fileSelectStatus === false ? ""
+    : "visible"
   return (
     <FlieBoxContainer>
-      <FileNotChosen><span>Please choose file</span></FileNotChosen>
+      <FileNotChosen className={isVisible}><span>{t("Please choose file")}</span></FileNotChosen>
       <FileInput>
         <input type="file" onChange={handleFile} />
-        <span>Choose your file</span>
+        <span>{t("Choose your file")}</span>
       </FileInput>
 
     </FlieBoxContainer>

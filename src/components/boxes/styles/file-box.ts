@@ -23,7 +23,7 @@ export const ActionButton = styled.button`
 `;
 
 export const FileNotChosen = styled.div`
-  visibility: visible;
+  visibility: hidden;
   position: relative;
   text-align: center;
   padding: 0.4rem 0;
@@ -31,6 +31,9 @@ export const FileNotChosen = styled.div`
   width: 50%;
   border: 1px solid #c61a09;
   border-radius: 0.3rem;
+  &.visible {
+    visibility: visible;
+  }
   &::after {
     content:"";
     position: absolute;
