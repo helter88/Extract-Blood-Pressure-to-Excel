@@ -8,16 +8,23 @@ import { createExcelAndExport } from "../../utils/excel-create-export";
 
 interface CenterBoxType {
   name: "create" | "add"
-  data: any
+  inputData: any,
+  excelData?: any,
+  changeFileSelectStatus: () => void
 }
 
-const CenterBox: React.FC<CenterBoxType> = ({ name, data }) => {
+const CenterBox: React.FC<CenterBoxType> = ({ name, inputData, excelData, changeFileSelectStatus }) => {
   const { t } = useTranslation();
 
   const onClickHandler = () => {
-    const parsedData = parse(data?.current?.value)
+    const parsedData = parse(inputData?.current?.value)
     if (name === "create") {
       createExcelAndExport(parsedData);
+    }
+    if (name === "add") {
+      if (excelData === null) {
+        changeFileSelectStatus()
+      }
     }
 
   }

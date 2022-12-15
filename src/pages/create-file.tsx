@@ -18,7 +18,7 @@ const CreateFile = () => {
   return (
     <CreateFileContainer>
       <InputBox ref={inputRef} />
-      <CenterBox name="create" data={inputRef} />
+      <CenterBox name="create" inputData={inputRef} changeFileSelectStatus={() => null} />
       <NewFileBox />
     </CreateFileContainer>
   );
