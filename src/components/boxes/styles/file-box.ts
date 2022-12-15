@@ -52,3 +52,12 @@ export const FileNotChosen = styled.div`
   }
 
 `
+export const ShowSelectedFile = styled.span`
+  margin-top: 0.8rem;
+  font-size: 0.7rem;
+  font-family: Arial;
+  font-weight: 300;
+  &.hidden {
+    visibility: hidden;
+  }
+`

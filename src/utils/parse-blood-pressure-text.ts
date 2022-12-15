@@ -52,7 +52,6 @@ export const parse = (text: string): BloodPressure[] => {
             }
 
             total = totalDefault
-            console.log("info from parse", bp)
             items.push(bp)
         }
     })

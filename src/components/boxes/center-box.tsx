@@ -24,6 +24,9 @@ const CenterBox: React.FC<CenterBoxType> = ({ name, inputData, excelData, change
     if (name === "add") {
       if (excelData === null) {
         changeFileSelectStatus()
+      } else {
+        excelData.push(...parsedData)
+        createExcelAndExport(excelData)
       }
     }
 
