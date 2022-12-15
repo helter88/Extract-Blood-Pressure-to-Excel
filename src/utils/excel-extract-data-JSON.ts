@@ -2,12 +2,12 @@ import * as XLSX from 'sheetjs-style';
 import i18next from "i18next";
 import { Console } from 'console';
 
-export const excelExtractDataJSON = (e: any) => {
+export const excelExtractDataJSON = async (e: any) => {
     const file = e?.target?.files[0];
     const reader = new FileReader();
     reader.readAsArrayBuffer(file);
     let filteredDataWithEnglishProperties;
-    reader.onload = (event: any) => {
+    const promise = new Promise((resolve, reject) => reader.onload = (event: any) => {
         const binarystr = new Uint8Array(event?.target?.result);
         const workbook = XLSX.read(binarystr, { type: 'array' });
         const firstSheetName = workbook.SheetNames[0];
@@ -27,7 +27,9 @@ export const excelExtractDataJSON = (e: any) => {
                 pulse: row[`${i18next.t("Pulse")}`]
             }
         })
+        resolve(filteredDataWithEnglishProperties)
 
-    }
-    return filteredDataWithEnglishProperties
+    })
+    const result = await Promise.all([promise])
+    return result[0]
 }

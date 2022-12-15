@@ -7,8 +7,8 @@ import { FileInput } from "./styles/file-input";
 
 const FileBox = () => {
 
-  const handleFile = (e: any) => {
-    const recivedData = excelExtractDataJSON(e);
+  const handleFile = async (e: any) => {
+    const recivedData = await excelExtractDataJSON(e);
     console.log('receivedData:', recivedData)
   }
 
