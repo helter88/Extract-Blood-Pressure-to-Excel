@@ -10,10 +10,20 @@ const InputBox = forwardRef<HTMLTextAreaElement>((props, ref) => {
 	const [error, setError] = useState<string>('');
 
 	const handleBlur = (e: any) => {
-		TextareaValidation(e.target.value);
+		const invalidLines = TextareaValidation(e.target.value);
 		/*Logika do validacji */
-		if (true) {
-			setError('Wrong format');
+		if (invalidLines.length !== 0) {
+			invalidLines.length > 3
+				? setError(
+						`${t('Wrong format lines')} ` +
+							`${invalidLines.slice(0, 3).join(',')}` +
+							', ...'
+				  )
+				: setError(
+						`${t('Wrong format in line/lines')} ` + `${invalidLines.join(',')}`
+				  );
+		} else {
+			setError('');
 		}
 	};
 
@@ -22,7 +32,7 @@ const InputBox = forwardRef<HTMLTextAreaElement>((props, ref) => {
 	return (
 		<InputBoxContainer>
 			<label htmlFor="results">{t('Add your results')}</label>
-			<label className="format">Format: DD.MM.YYYY 120/80 p 70</label>
+			<label className="format">Format: 01.01.2023 120/80 p 70</label>
 			<textarea
 				onBlur={handleBlur}
 				onFocus={() => setError('')}

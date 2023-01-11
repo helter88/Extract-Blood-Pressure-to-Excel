@@ -23,7 +23,9 @@ export const InputBoxContainer = styled.div`
 		opacity: 0.5;
 	}
 	span {
+		margin-top: 0.5rem;
 		color: #cd3f2c;
-		font-size: 1.1rem;
+		font-size: 1rem;
+		width: 100%;
 	}
 `;
