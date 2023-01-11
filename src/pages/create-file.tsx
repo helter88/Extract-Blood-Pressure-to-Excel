@@ -1,11 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import CenterBox from '../components/boxes/center-box';
 import NewFileBox from '../components/boxes/new-file-box';
 import InputBox from '../components/boxes/input-box';
-import { useEffectOnce } from 'usehooks-ts';
 import { createExcelAndExport } from '../utils/excel-create-export';
 import { parse } from '../utils/parse-blood-pressure-text';
+import { useTranslation } from 'react-i18next';
 
 export const CreateFileContainer = styled.div`
 	margin-top: 10rem;
@@ -15,16 +15,29 @@ export const CreateFileContainer = styled.div`
 `;
 
 const CreateFile = () => {
+	const [inputError, setInputError] = useState(false);
+	const { t } = useTranslation();
+
 	const inputRef = useRef<HTMLTextAreaElement>(null);
 
+	const onInputError = (isError: boolean) => {
+		setInputError(isError);
+	};
+
 	const handleCreateFile = () => {
-		const parsedData = parse(inputRef?.current?.value || '');
+		const inputValue = inputRef?.current?.value;
+		if (inputError) return;
+		if (inputValue === '') {
+			alert(`${t('Write formated data')}`);
+			return;
+		}
+		const parsedData = parse(inputValue || '');
 		createExcelAndExport(parsedData);
 	};
 
 	return (
 		<CreateFileContainer>
-			<InputBox ref={inputRef} />
+			<InputBox ref={inputRef} onIsErrorChange={onInputError} />
 			<CenterBox
 				name="create"
 				inputData={inputRef}

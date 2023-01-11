@@ -21,5 +21,6 @@
 	"Please choose file": "Bitte Datei auswählen",
 	"Selected file:": "Ausgewählte Datei:",
 	"Wrong format lines": "Falsches Format in Zeilen:",
-	"Wrong format in line/lines": "Falsches Format in Zeile/Zeilen:"
+	"Wrong format in line/lines": "Falsches Format in Zeile/Zeilen:",
+	"Write formated data": "Geben Sie formatierte Blutdruckdaten in das grüne Fenster auf der linken Seite ein"
 }

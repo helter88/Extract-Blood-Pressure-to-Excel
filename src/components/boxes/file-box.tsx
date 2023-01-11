@@ -7,6 +7,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { excelExtractDataJSON } from '../../utils/excel-extract-data-JSON';
 import { FileInput } from './styles/file-input';
+import { validateFileType } from '../../utils/validate-file-type';
 
 export interface FileBoxTypes {
 	excelData: (recivedData: any) => void;
@@ -23,6 +24,7 @@ const FileBox: React.FC<FileBoxTypes> = ({
 	const [selectedFileName, setSelectedFileName] = useState('');
 	const handleFile = async (e: any) => {
 		const recivedData = await excelExtractDataJSON(e);
+
 		excelData(recivedData);
 		if (e) {
 			setSelectedFileName(e?.target?.files[0]?.name);

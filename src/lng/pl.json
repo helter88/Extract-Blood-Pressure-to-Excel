@@ -21,5 +21,6 @@
 	"Please choose file": "Proszę wybrać plik",
 	"Selected file:": "Wybrany plik:",
 	"Wrong format lines": "Zły format w wierszach:",
-	"Wrong format in line/lines": "Zły format w wierszu/wierszach:"
+	"Wrong format in line/lines": "Zły format w wierszu/wierszach:",
+	"Write formated data": "Wprowadź sformatowane dane dotyczące ciśnienia krwi w zielonym oknie po lewej stronie"
 }

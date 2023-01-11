@@ -14,7 +14,7 @@ const AddToFile = () => {
 	const [fileSelectStatus, setFileSelectStatus] = useState<boolean | null>(
 		null
 	);
-	const [excelJson, setExcelJson] = useState<any>({});
+	const [inputError, setInputError] = useState(false);
 
 	const handleExcelData = (excelData: any) => {
 		setFileBoxData(excelData);
@@ -28,23 +28,28 @@ const AddToFile = () => {
 		setFileSelectStatus(false);
 	};
 
-	const handleText = (text: string) => {};
+	const onInputError = (isError: boolean) => {
+		setInputError(isError);
+	};
 
 	const handleClick = () => {
-		const parsedData = parse(inputRef?.current?.value || '');
-
-		const mergedData = mergeData(parsedData, fileBoxData);
+		if (inputError) return;
 
 		if (fileBoxData === null) {
 			handleFileSelectStatus();
-		} else {
-			createExcelAndExport(mergedData);
+			return;
 		}
+		if (!inputRef?.current?.value) {
+			return;
+		}
+		const parsedData = parse(inputRef?.current?.value || '');
+		const mergedData = mergeData(parsedData, fileBoxData);
+		createExcelAndExport(mergedData);
 	};
 
 	return (
 		<CreateFileContainer>
-			<InputBox ref={inputRef} />
+			<InputBox ref={inputRef} onIsErrorChange={onInputError} />
 			<CenterBox
 				onClick={handleClick}
 				name="add"
