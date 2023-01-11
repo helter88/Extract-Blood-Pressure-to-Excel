@@ -12,6 +12,21 @@ export const CreateFileContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 0 25rem;
+	@media (max-width: 1800px) {
+		padding: 0 20rem;
+	}
+	@media (max-width: 1650px) {
+		padding: 0 15rem;
+	}
+	@media (max-width: 1550px) {
+		padding: 0 10rem;
+	}
+	@media (max-width: 1350px) {
+		padding: 0 5rem;
+	}
+	@media (max-width: 1000px) {
+		margin-top: 5rem;
+	}
 `;
 
 const CreateFile = () => {
