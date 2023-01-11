@@ -22,5 +22,6 @@
 	"Selected file:": "Wybrany plik:",
 	"Wrong format lines": "Zły format w wierszach:",
 	"Wrong format in line/lines": "Zły format w wierszu/wierszach:",
-	"Write formated data": "Wprowadź sformatowane dane dotyczące ciśnienia krwi w zielonym oknie po lewej stronie"
+	"Write formated data": "Wprowadź sformatowane dane dotyczące ciśnienia krwi w zielonym oknie po lewej stronie",
+	"Invalid data format of your chosen": "Nieprawidłowy format danych wybranego pliku programu Excel. Wybierz inny lub utwórz nowy."
 }

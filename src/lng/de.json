@@ -22,5 +22,6 @@
 	"Selected file:": "Ausgewählte Datei:",
 	"Wrong format lines": "Falsches Format in Zeilen:",
 	"Wrong format in line/lines": "Falsches Format in Zeile/Zeilen:",
-	"Write formated data": "Geben Sie formatierte Blutdruckdaten in das grüne Fenster auf der linken Seite ein"
+	"Write formated data": "Geben Sie formatierte Blutdruckdaten in das grüne Fenster auf der linken Seite ein.",
+	"Invalid data format of your chosen": "Ungültiges Datenformat Ihrer ausgewählten Excel-Datei. Bitte wählen Sie einen anderen oder erstellen Sie einen neuen."
 }

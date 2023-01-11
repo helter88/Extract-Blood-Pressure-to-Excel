@@ -22,5 +22,6 @@
 	"Selected file:": "Selected file:",
 	"Wrong format lines": "Wrong format in lines:",
 	"Wrong format in line/lines": "Wrong format in line/lines:",
-	"Write formated data": "Enter formatted blood pressure data in the green window on the left"
+	"Write formated data": "Enter formatted blood pressure data in the green window on the left.",
+	"Invalid data format of your chosen": "Invalid data format of your chosen excel file. Please choose another one or create new one."
 }

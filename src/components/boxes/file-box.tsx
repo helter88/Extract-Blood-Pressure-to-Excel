@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { excelExtractDataJSON } from '../../utils/excel-extract-data-JSON';
 import { FileInput } from './styles/file-input';
 import { validateFileType } from '../../utils/validate-file-type';
+import { validateClientExcel } from '../../utils/validate-client-exel-file';
 
 export interface FileBoxTypes {
 	excelData: (recivedData: any) => void;
@@ -24,7 +25,10 @@ const FileBox: React.FC<FileBoxTypes> = ({
 	const [selectedFileName, setSelectedFileName] = useState('');
 	const handleFile = async (e: any) => {
 		const recivedData = await excelExtractDataJSON(e);
-
+		if (!validateClientExcel(recivedData)) {
+			alert(`${t('Invalid data format of your chosen')}`);
+			return;
+		}
 		excelData(recivedData);
 		if (e) {
 			setSelectedFileName(e?.target?.files[0]?.name);
