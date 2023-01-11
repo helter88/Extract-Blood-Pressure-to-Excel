@@ -3,14 +3,14 @@ import { InputBoxContainer } from './styles/input-box';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { callbackify } from 'util';
+import { TextareaValidation } from '../../textarea-validation-format';
 
 const InputBox = forwardRef<HTMLTextAreaElement>((props, ref) => {
 	const { t } = useTranslation();
 	const [error, setError] = useState<string>('');
 
 	const handleBlur = (e: any) => {
-		let inputArr = e.target.value.split('\n');
-		console.log(inputArr);
+		TextareaValidation(e.target.value);
 		/*Logika do validacji */
 		if (true) {
 			setError('Wrong format');
