@@ -42,7 +42,11 @@ const FileBox: React.FC<FileBoxTypes> = ({
 				<span>{t('Please choose file')}</span>
 			</FileNotChosen>
 			<FileInput>
-				<input type="file" onChange={handleFile} />
+				<input
+					type="file"
+					onChange={handleFile}
+					accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+				/>
 				<span>{t('Choose your file')}</span>
 			</FileInput>
 			<ShowSelectedFile className={statusShowSelectedFile}>
