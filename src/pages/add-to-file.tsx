@@ -7,6 +7,7 @@ import { CreateFileContainer } from './create-file';
 import { createExcelAndExport } from '../utils/excel-create-export';
 import { parse } from '../utils/parse-blood-pressure-text';
 import { mergeData } from '../utils/merge-excel-data-with-text';
+import { useTranslation } from 'react-i18next';
 
 const AddToFile = () => {
 	const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -15,6 +16,7 @@ const AddToFile = () => {
 		null
 	);
 	const [inputError, setInputError] = useState(false);
+	const { t } = useTranslation();
 
 	const handleExcelData = (excelData: any) => {
 		setFileBoxData(excelData);
@@ -40,6 +42,7 @@ const AddToFile = () => {
 			return;
 		}
 		if (!inputRef?.current?.value) {
+			alert(`${t('Write formated data')}`);
 			return;
 		}
 		const parsedData = parse(inputRef?.current?.value || '');
