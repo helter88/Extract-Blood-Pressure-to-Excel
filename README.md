@@ -18,7 +18,9 @@ The app wrote to solve problem of transferring blood pressure data from notepad 
 ## Features
 
 - Dropdawn menu with languages
+
   <img src="./readme_images/dropdown-menu.JPG" alt="dropdown-menu">
+  
 - Translation of content in 4th languages
 - Text box with validation of provided data
 - Pointing invalid lines in text box and showing this information below text box
