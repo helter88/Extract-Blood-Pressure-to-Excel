@@ -41,9 +41,7 @@ const InputBox = forwardRef<HTMLTextAreaElement, InputBoxProps>(
 				<label className="add-result" htmlFor="results">
 					{t('Add your results')}
 				</label>
-				<label className="format">
-					Fill data below in the following format:
-				</label>
+				<label className="format">{t('Fill data below')}</label>
 				<label className="format"> DD.MM.YYYY 120/80 p 70</label>
 
 				<textarea
@@ -54,7 +52,7 @@ const InputBox = forwardRef<HTMLTextAreaElement, InputBoxProps>(
 					name="results"
 					rows={21}
 					cols={30}
-					placeholder="01.01.2023 120/80 p 70  02.01.2023 125/70 p 55 "
+					placeholder="01.01.2023 120/80 p 70            02.01.2023 125/70 p 55 "
 					className={`${isError ? 'error' : ''}`}
 				/>
 				{isError && <span>{error}</span>}
