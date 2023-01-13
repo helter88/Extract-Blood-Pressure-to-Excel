@@ -27,6 +27,8 @@ The app wrote to solve problem of transferring blood pressure data from notepad 
 - Pointing invalid lines in text box and showing this information below text box
 - Creating new Excel file with provided data from text box
 - Adding data from text box to chosen Excel file
+- Sort excel data by date
+- Calculate average after every 7th data
 - Validation of chosen Excel file
 - Notifications about user errors
 
