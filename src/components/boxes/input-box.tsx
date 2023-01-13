@@ -2,7 +2,6 @@ import { forwardRef, useEffect } from 'react';
 import { InputBoxContainer } from './styles/input-box';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import { callbackify } from 'util';
 import { TextareaValidation } from '../../utils/textarea-validation-format';
 
 interface InputBoxProps {

@@ -4,7 +4,7 @@ import { calculateAverage } from './calculate-average';
 export const mergeData = (from: any, to: any) => {
 	const newData: any = to;
 
-	from.map((item: any) => {
+	from.forEach((item: any) => {
 		if (!to.some((toItem: any) => toItem.date === item.date))
 			newData.push(item);
 	});

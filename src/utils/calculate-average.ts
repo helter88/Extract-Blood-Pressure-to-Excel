@@ -7,7 +7,7 @@ export const calculateAverage = (data: any) => {
 	let total = totalDefault;
 	let items: BloodPressure[] = [];
 
-	data.map((item: any, i: number) => {
+	data.forEach((item: any, i: number) => {
 		const pulse = item.pulse;
 		const systolic = item.systolic;
 		const diastolic = item.diastolic;

@@ -7,7 +7,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import { excelExtractDataJSON } from '../../utils/excel-extract-data-JSON';
 import { FileInput } from './styles/file-input';
-import { validateFileType } from '../../utils/validate-file-type';
 import { validateClientExcel } from '../../utils/validate-client-exel-file';
 
 export interface FileBoxTypes {

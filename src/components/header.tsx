@@ -23,7 +23,7 @@ const Header = () => {
 
 	useEffect(() => {
 		i18n.changeLanguage(lngToISO(language));
-	}, []);
+	}, [i18n, language]);
 
 	return (
 		<HeaderStyle>

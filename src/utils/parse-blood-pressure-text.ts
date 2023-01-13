@@ -13,7 +13,7 @@ export const parse = (text: string): BloodPressure[] => {
 
 	let items: BloodPressure[] = [];
 
-	columns.map((c, i) => {
+	columns.forEach((c, i) => {
 		let pulseTxt = c[2];
 		let pulse: number = 0;
 
