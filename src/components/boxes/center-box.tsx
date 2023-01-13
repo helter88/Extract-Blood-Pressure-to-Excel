@@ -2,8 +2,6 @@ import { ReactComponent as RightArrow } from '../../assets/img/arrow-right-icon.
 import { useTranslation } from 'react-i18next';
 import { ArrowContainer, CenterContainer } from './styles/center-box';
 import { ActionButton } from './styles/file-box';
-import { parse } from '../../utils/parse-blood-pressure-text';
-import { createExcelAndExport } from '../../utils/excel-create-export';
 
 interface CenterBoxType {
 	name: 'create' | 'add';
@@ -14,9 +12,6 @@ interface CenterBoxType {
 }
 
 const CenterBox: React.FC<CenterBoxType> = ({
-	name,
-	inputData,
-	excelData,
 	changeFileSelectStatus,
 	onClick,
 }) => {
