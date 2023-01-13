@@ -1,8 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
 const useLanguages = () => {
-	const allLanguages = ['English', 'German', 'Italian', 'Polish'];
+	const allLanguages = useMemo(
+		() => ['English', 'German', 'Italian', 'Polish'],
+		[]
+	);
 	const [languages, setLanguages] = useState(allLanguages);
 	const [language, setLanguage] = useLocalStorage('language', '');
 
@@ -31,7 +34,7 @@ const useLanguages = () => {
 
 	useEffect(() => {
 		setLanguages(() => allLanguages?.filter((item) => item !== language));
-	}, [language]);
+	}, [language, allLanguages]);
 
 	return { language, languages, setLanguage };
 };
