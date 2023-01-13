@@ -2,7 +2,7 @@
 
 <img src="./readme_images/blood-pressure-main.JPG" alt="project image">
 
-> See demo live : [click here]( 'click to open link')
+> See demo live : [click here](https://extract-blood-pressure-to-excel.netlify.app/ 'click to open link')
 
 ## Description
 
