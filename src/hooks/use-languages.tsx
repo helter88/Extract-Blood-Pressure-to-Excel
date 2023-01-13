@@ -31,7 +31,7 @@ const useLanguages = () => {
 
 	useEffect(() => {
 		setLanguages(() => allLanguages?.filter((item) => item !== language));
-	}, [language, allLanguages]);
+	}, [language]);
 
 	return { language, languages, setLanguage };
 };
