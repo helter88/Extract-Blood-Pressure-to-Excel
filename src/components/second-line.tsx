@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const H2 = styled.h2`
 	text-align: center;
-	margin-top: 10rem;
+	margin-top: 5rem;
 	font-size: 1.5rem;
 	font-weight: 400;
 	@media (max-width: 1150px) {
-		margin-top: 5rem;
+		margin-top: 4rem;
 	}
 `;
 const SecondLine = () => {

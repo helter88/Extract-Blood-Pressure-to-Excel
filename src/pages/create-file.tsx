@@ -8,7 +8,7 @@ import { parse } from '../utils/parse-blood-pressure-text';
 import { useTranslation } from 'react-i18next';
 
 export const CreateFileContainer = styled.div`
-	margin-top: 10rem;
+	margin-top: 8rem;
 	display: flex;
 	justify-content: space-between;
 	padding: 0 25rem;
