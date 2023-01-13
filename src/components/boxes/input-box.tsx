@@ -34,7 +34,7 @@ const InputBox = forwardRef<HTMLTextAreaElement, InputBoxProps>(
 		const isError = error.length > 0;
 		useEffect(() => {
 			props.onIsErrorChange(isError);
-		}, [error]);
+		}, [isError, props]);
 
 		return (
 			<InputBoxContainer>

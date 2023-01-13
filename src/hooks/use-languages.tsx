@@ -27,11 +27,11 @@ const useLanguages = () => {
 				prev.filter((lang) => lang !== selectedDefaultLang)
 			);
 		}
-	}, [language]);
+	}, [language, setLanguage]);
 
 	useEffect(() => {
 		setLanguages(() => allLanguages?.filter((item) => item !== language));
-	}, [language]);
+	}, [language, allLanguages]);
 
 	return { language, languages, setLanguage };
 };
