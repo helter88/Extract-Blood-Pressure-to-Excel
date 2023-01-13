@@ -38,16 +38,23 @@ const InputBox = forwardRef<HTMLTextAreaElement, InputBoxProps>(
 
 		return (
 			<InputBoxContainer>
-				<label htmlFor="results">{t('Add your results')}</label>
-				<label className="format">Format: 01.01.2023 120/80 p 70</label>
+				<label className="add-result" htmlFor="results">
+					{t('Add your results')}
+				</label>
+				<label className="format">
+					Fill data below in the following format:
+				</label>
+				<label className="format"> DD.MM.YYYY 120/80 p 70</label>
+
 				<textarea
 					onBlur={handleBlur}
 					onFocus={() => setError('')}
 					ref={ref}
 					id="results"
 					name="results"
-					rows={23}
+					rows={21}
 					cols={30}
+					placeholder="01.01.2023 120/80 p 70  02.01.2023 125/70 p 55 "
 					className={`${isError ? 'error' : ''}`}
 				/>
 				{isError && <span>{error}</span>}

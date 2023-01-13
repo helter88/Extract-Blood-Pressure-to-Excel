@@ -23,5 +23,6 @@
 	"Wrong format lines": "Formato errato nelle righe:",
 	"Wrong format in line/lines": "Formato errato in riga/righe:",
 	"Write formated data": "Immettere i dati formattati sulla pressione arteriosa nella finestra verde a sinistra.",
-	"Invalid data format of your chosen": "Formato dati non valido del file excel scelto. Scegline un altro o creane uno nuovo."
+	"Invalid data format of your chosen": "Formato dati non valido del file excel scelto. Scegline un altro o creane uno nuovo.",
+	"Fill data below": "Compila i dati di seguito nel seguente formato:"
 }
